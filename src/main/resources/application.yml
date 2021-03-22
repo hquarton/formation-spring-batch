@@ -1,0 +1,11 @@
+# Configuration Spring
+spring:
+    application:
+        # Non de l'application
+        name: Formation Spring Batch
+    main:
+        # Activation de la bannière https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/Banner.Mode.html
+        banner-mode: console
+    batch:
+        # Désactivation de l'initialisation du MCD associé à Spring Batch
+        initialize-schema: never
