@@ -8,4 +8,11 @@ spring:
         banner-mode: console
     batch:
         # Désactivation de l'initialisation du MCD associé à Spring Batch
-        initialize-schema: never
+        initialize-schema: always
+
+    # Datasource PostgreSQL
+    datasource:
+        username: example
+        password: example
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/example?currentSchema=formation-spring-batch
