@@ -9,6 +9,8 @@ spring:
     batch:
         # Désactivation de l'initialisation du MCD associé à Spring Batch
         initialize-schema: always
+        # Activation / désactivation de l'exécution du job
+        job.enabled: true
 
     # Datasource PostgreSQL
     datasource:

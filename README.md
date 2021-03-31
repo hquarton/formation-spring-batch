@@ -66,6 +66,17 @@ Après execution du batch, on obtient le modèle de données suivant
 <img src="docs/pictures/mcd-spring-batch.png"/>
 </details>
 
+
+## Step 02 - Configuration de la tasklet
+
+Dans cette étape, nous cherchons à utiliser les tasklet.
+Nous en avons créé deux :
+- la tasklet de [décompression](src/main/java/com/sopra/formationspringbatch/setps/UncompressTasklet.java)
+- la tasklet de [suppression des fichiers extraits](src/main/java/com/sopra/formationspringbatch/setps/FileDeletingTasklet.java)
+
+Notre premier Job est configuré [méthode processJob](src/main/java/com/sopra/formationspringbatch/config/BatchConfiguration.java) :
+- On lui paramètre les 2 tasklets précédentes, via le **StepBuilderFactory** pour pouvoir générer un job via **JobBuilderFactory**
+
 ## Build & exécution
 
 ### Build (Local)
